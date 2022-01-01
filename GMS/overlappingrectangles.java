@@ -1,5 +1,4 @@
 //https://practice.geeksforgeeks.org/problems/overlapping-rectangles1924/1/
-//https://leetcode.com/problems/circle-and-rectangle-overlapping/
 class Solution {
     int doOverlap(int L1[], int R1[], int L2[], int R2[]) {
         // code here
@@ -12,3 +11,14 @@ class Solution {
         
     }
 };
+
+//https://leetcode.com/problems/circle-and-rectangle-overlapping/
+class Solution {
+    public boolean checkOverlap(int radius, int xCenter, int yCenter, int x1, int y1, int x2, int y2) {
+        
+    int xn = Math.max(x1,Math.min(x2,xCenter));
+    int yn = Math.max(y1,Math.min(y2,yCenter));
+    
+    return Math.sqrt((xn-xCenter)*(xn-xCenter)+(yn-yCenter)*(yn-yCenter)) <= radius;
+    }
+}
